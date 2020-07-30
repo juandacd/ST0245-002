@@ -40,7 +40,13 @@ class Fecha():
                     return "Las fechas son iguales"
             
  
-    def Mostrar_Fecha(self):
+    def Mostrar_Fecha1(self):
         return str(self.día)+"/"+str(self.mes)+"/"+str(+self.año)
+    
+    
+    def Mostrar_Fecha2(self):
+        Meses = ("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre")
+        return str(self.día) +" de " + Meses[self.mes - 1] + " del "+ str(self.año)
         
 #print(Fecha(15,12,2001).Comparar_Fechas(Fecha(15,12,2002)))
+#print(Fecha(15,8,2001).Mostrar_Fecha2())    
