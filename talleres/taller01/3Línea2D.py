@@ -11,8 +11,8 @@ class Punto2D():
         return self.y
    
    
-Coordenada1 = Punto2D(3,3)
-Coordenada2 = Punto2D(0,0)
+Coordenada1 = Punto2D(5,2)
+Coordenada2 = Punto2D(0,12)
 
 
 class Línea2D():
@@ -38,33 +38,33 @@ class Línea2D():
             if((self.Punto1.get_y() - self.Punto2.get_y()) != 0):
                 Pendiente = (self.Punto1.get_y() - self.Punto2.get_y())/(self.Punto1.get_x() - self.Punto2.get_x())
                 if(Pendiente == int(Pendiente)):        
-                    Intermedios = abs(self.Punto1.get_x() - self.Punto2.get_x())
-                    if(Intermedios > 1):
+                    Intermedios = abs(self.Punto1.get_x() - self.Punto2.get_x()) - 1
+                    if(Intermedios > 0):
                         if(Pendiente > 0):                       
                             if(self.Punto1.get_x() < self.Punto2.get_x()):
                                 for i in range(Intermedios):
-                                    t=(self.Punto1.get_x()+(i+1), self.Punto1.get_y()+(i+1))
+                                    t=(self.Punto1.get_x()+(i+1), self.Punto1.get_y()+((i+1)*int(Pendiente)))
                                     Puntos_Intermedios.append(t)
                             else:
                                 for i in range(Intermedios):
-                                    t=(self.Punto2.get_x()+(i+1), self.Punto2.get_y()+(i+1))
+                                    t=(self.Punto2.get_x()+(i+1), self.Punto2.get_y()+((i+1)*int(Pendiente)))
                                     Puntos_Intermedios.append(t)
                         else:
                             if(self.Punto1.get_x() < self.Punto2.get_x()):
                                 for i in range(Intermedios):
-                                    t=(self.Punto1.get_x()+(i+1), self.Punto1.get_y()-(i+1))
+                                    t=(self.Punto1.get_x()+(i+1), self.Punto1.get_y()+((i+1)*int(Pendiente)))
                                     Puntos_Intermedios.append(t)
                             else:
                                 for i in range(Intermedios):
-                                    t=(self.Punto2.get_x()+(i+1), self.Punto2.get_y()-(i+1))
+                                    t=(self.Punto2.get_x()+(i+1), self.Punto2.get_y()+((i+1)*int(Pendiente)))
                                     Puntos_Intermedios.append(t)
                     else:
                         return "No hay puntos intermedios"
                 else:
                     return "No hay puntos intermedios"
             else:
-                Intermedios = abs(self.Punto1.get_x()- self.Punto2.get_x())
-                if(Intermedios > 1):
+                Intermedios = abs(self.Punto1.get_x()- self.Punto2.get_x()) - 1
+                if(Intermedios > 0):
                     if(self.Punto1.get_x() < self.Punto2.get_x()):
                         for i in range(Intermedios):
                             t=(self.Punto1.get_x()+(i+1), self.Punto1.get_y())
@@ -76,8 +76,8 @@ class Línea2D():
                 else:
                     return "No hay puntos intermedios"
         else:
-            Intermedios = abs(self.Punto1.get_y()- self.Punto2.get_y())
-            if(Intermedios > 1):
+            Intermedios = abs(self.Punto1.get_y()- self.Punto2.get_y()) -1 
+            if(Intermedios > 0):
                 if(self.Punto1.get_y() < self.Punto2.get_y()):
                      for i in range(Intermedios):
                             t=(self.Punto1.get_x(), self.Punto1.get_y()+(i+1))
@@ -93,5 +93,5 @@ class Línea2D():
                         
 #print("Punto1: " + str(Línea2D(Coordenada1, Coordenada2).get_punto1()))
 #print("Punto2: " + str(Línea2D(Coordenada1, Coordenada2).get_punto2()))
-#print("Puntos intermedios: " + str(Línea2D(Coordenada1, Coordenada2).Puntos_Intermedios()))
+print("Puntos intermedios: " + str(Línea2D(Coordenada1, Coordenada2).Puntos_Intermedios()))
       
