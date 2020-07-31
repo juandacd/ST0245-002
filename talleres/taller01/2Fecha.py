@@ -1,3 +1,4 @@
+import math
 class Fecha():
 
     def __init__(self, día, mes, año):
@@ -48,5 +49,5 @@ class Fecha():
         Meses = ("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre")
         return str(self.día) +" de " + Meses[self.mes - 1] + " del "+ str(self.año)
         
-#print(Fecha(15,12,2001).Comparar_Fechas(Fecha(15,12,2002)))
-#print(Fecha(15,8,2001).Mostrar_Fecha2())    
+print(Fecha(15,12,2001).Comparar_Fechas(Fecha(15,12,2002)))
+print(Fecha(15,8,2001).Mostrar_Fecha2())    
