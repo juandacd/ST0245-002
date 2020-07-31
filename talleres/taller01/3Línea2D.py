@@ -1,3 +1,4 @@
+import math
 class Punto2D():
 
     def __init__(self, x, y):
@@ -91,7 +92,7 @@ class Línea2D():
         return Puntos_Intermedios
                                 
                         
-#print("Punto1: " + str(Línea2D(Coordenada1, Coordenada2).get_punto1()))
-#print("Punto2: " + str(Línea2D(Coordenada1, Coordenada2).get_punto2()))
+print("Punto1: " + str(Línea2D(Coordenada1, Coordenada2).get_punto1()))
+print("Punto2: " + str(Línea2D(Coordenada1, Coordenada2).get_punto2()))
 print("Puntos intermedios: " + str(Línea2D(Coordenada1, Coordenada2).Puntos_Intermedios()))
       
