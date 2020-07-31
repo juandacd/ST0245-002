@@ -27,5 +27,5 @@ class Punto2D():
     def dist_euclidiana(self, other):
         return math.sqrt((self.x - other.x)**2 + (self.y - other.y)**2 ) 
     
-#print(Punto2D(3.2,5.78).angulo_polar())
+print(Punto2D(3.2,5.78).angulo_polar())
         
