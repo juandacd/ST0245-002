@@ -5,4 +5,4 @@ def Suma_grupo(start, nums, target):
         return False
     return Suma_grupo(start+1, nums, target-nums[start]) or Suma_grupo(start+1, nums, target)    
     
-print(Suma_grupo(0,[2, 4, 8],9))
+print(Suma_grupo(0,[5, 1, 3],6))
