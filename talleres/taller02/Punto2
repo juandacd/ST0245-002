@@ -3,4 +3,4 @@ def Suma_grupo(start, nums, target):
         return True
     if start == nums.length:
         return False
-    return Suma_grupo(start+1, nums, target-nums[start]) || Suma_grupo(start+1, nums, target)        
+    return Suma_grupo(start+1, nums, target-nums[start]) or Suma_grupo(start+1, nums, target)        
