@@ -1,13 +1,13 @@
-def subconjuntos(vaina_rara):
-    subconjuntosBase("", vaina_rara)
+def Subconjuntos(vaina_rara):
+    SubconjuntosBase("", vaina_rara)
 
-def subconjuntosBase(base, s):
-    if len(s) == 0:
+def SubconjuntosBase(base, s):
+    if(len(s) == 0):
         print(base)
     else:
         x = s[1:]
         y= s[:1]
-        subconjuntosBase(base+y,x)
-        subconjuntosBase(base,x)
+        SubconjuntosBase(base+y,x)
+        SubconjuntosBase(base,x)
 
-print(subconjuntos("ESK9"))
+print(Subconjuntos("ESK9"))
