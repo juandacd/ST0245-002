@@ -1,8 +1,6 @@
 def Subcadena(cadena1, cadena2):
     if(len(cadena1)==0 or len(cadena2)==0):
         return 0
-    #m=len(cadena1)-1
-    #n=len(cadena2)-1
     if(cadena1[len(cadena1)-1] == cadena2[len(cadena2)-1]):
         w = cadena1[:-1]
         z = cadena2[:-1]
