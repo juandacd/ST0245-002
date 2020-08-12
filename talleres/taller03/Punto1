@@ -1,0 +1,7 @@
+def hanoi(N, a = ="Tower1", b = "Tower2", c = "Tower3"):
+    if N == 1:
+        print(a + "->" + c)
+    else:
+        hanoi(N-1, a, c, b)  
+        hanoi(1, a, b, c)
+        hanoi(N-1, b, a, c)
