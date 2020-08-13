@@ -2,7 +2,7 @@ def combinaciones(cadena):
     permutations("",cadena)
     
 def permutations(base, cadena):
-    if (len(cadena) == 0 ):
+    if (len(cadena) == 0):
         print(base)
     else:
         i = 0
