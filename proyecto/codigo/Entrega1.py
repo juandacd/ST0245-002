@@ -10,13 +10,14 @@ Filtro = Datos.iloc[:,[2, 4, 5, 6, 7, 8, 9, 10, 13, 19, 22, 23, 24, 25, 32, 35,
 Filtro = Filtro.fillna(0) #Cambia datos NaN(vacíos) por 0
 Aspectos = tuple(Filtro.columns.values)
 
-print(Filtro.dtypes) #Tipo de dato cada item-columna
+#print(Filtro.dtypes) #Tipo de dato cada item-columna
+print(Filtro.info())
 
 i=0
 for i in range (len(Aspectos)):
     if(Filtro.iloc[:,i].dtype == 'float64'):
         Filtro.iloc[:,i] = Filtro.iloc[:,i].astype('float16')
     if(Filtro.iloc[:,i].dtype == 'int64'):
-        Filtro.iloc[:,i] = Filtro.iloc[:,i].astype('int16')
+        Filtro.iloc[:,i] = Filtro.iloc[:,i].astype('int16') # Se cambia el tipo de dato para usar menos memoria
         
 print(Filtro.info())#Tipos de datos y uso de la memoria
