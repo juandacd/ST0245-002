@@ -9,6 +9,7 @@ Filtro = Datos.iloc[:,[2, 4, 5, 6, 7, 8, 9, 10, 13, 19, 22, 23, 24, 25, 32, 35,
 
 Filtro = Filtro.fillna(0) #Cambia datos NaN(vacíos) por 0
 Aspectos = tuple(Filtro.columns.values)
+
 print(Filtro.dtypes) #Tipo de dato cada item-columna
 
 i=0
