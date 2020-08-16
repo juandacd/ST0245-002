@@ -11,7 +11,7 @@ Filtro = Filtro.fillna(0) #Cambia datos NaN(vacíos) por 0
 Aspectos = tuple(Filtro.columns.values)
 
 #print(Filtro.dtypes) #Tipo de dato cada item-columna
-print(Filtro.info())
+print(Filtro.info())#Tipos de datos y uso de la memoria
 
 i=0
 for i in range (len(Aspectos)):
