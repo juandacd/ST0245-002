@@ -8,7 +8,7 @@ def Suma_grupo(start, nums, target):
         #T(n) = c1*2^(n-1) + c3*(2^n-1)
         
 for n in range(15,26):
-    T1 = time()
+    Tiempo_inicial = time()
     Suma_grupo(0, [0]*n, 10)
-    T2 = time()
-    print(T2-T1)
+    Tiempo_final = time()
+    print(Tiemp_inicial - Tiempo_final)
