@@ -17,10 +17,10 @@ for n in range(10,25):
     plt.plot(n, T2-T1, 'go')
 
 def exponencial(k):
-    return (6*(9.8**-7.4))*(np.e**(0.712*k)) #Gráfica exponencial de tendencia
+    return (6*(9.8**-7.2))*(np.e**(0.712*k)) #Gráfica exponencial de tendencia
 
 z=np.linspace(10,25,20)
-plt.plot(z,exponencial(z), label=r'$6(9.8^{-7.4})e^{0.712n}$', color='m') 
+plt.plot(z,exponencial(z), label=r'$6(9.8^{-7.2})e^{0.712n}$', color='m') 
 
 plt.legend(loc=2)
 plt.title('Complejidad T(n) de groupSum')
