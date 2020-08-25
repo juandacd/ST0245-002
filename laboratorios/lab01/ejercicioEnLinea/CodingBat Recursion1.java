@@ -1,6 +1,6 @@
 Ejercicios en línea - CodingBat
 
-1.bunnyEars
+//1.bunnyEars
 public int bunnyEars(int bunnies) 
 {
   if(bunnies == 0){return 0;}
@@ -8,7 +8,7 @@ public int bunnyEars(int bunnies)
 }
 
 
-2.triangle
+//2.triangle
 public int triangle(int rows) 
 {
   if(rows==0){return 0;}
@@ -16,7 +16,7 @@ public int triangle(int rows)
 }
 
 
-3.sumDigits
+//3.sumDigits
 public int sumDigits(int n) 
 {
   if(n==0){return 0;}
@@ -24,7 +24,7 @@ public int sumDigits(int n)
 }
 
 
-4.count8
+//4.count8
 public int count8(int n) 
 {
   if(n == 0){return 0;}
@@ -40,14 +40,12 @@ public int count8(int n)
 }
 
 
-5.array11
+//5.array11
 public int array11(int[] nums, int index) 
 {
-  if(index==nums.length)
-    return 0;
+  if(index==nums.length){return 0;}
   else
-    if(nums[index]==11)
-      return 1 + array11(nums, index+1);
-    else 
-      return array11(nums,index+1);
+    if(nums[index]==11){return 1 + array11(nums, index+1);}
+    else{return array11(nums,index+1);}
 }
+
