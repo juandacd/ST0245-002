@@ -30,7 +30,7 @@ public boolean groupSum5(int start, int[] nums, int target)
 }
 
 
-4.griupSumClump
+4.groupSumClump
 public boolean groupSumClump(int start, int[] nums, int target) 
 {
   if(start == nums.length) {return target == 0;}
