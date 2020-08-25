@@ -7,6 +7,7 @@ public int bunnyEars(int bunnies)
   else{return 2 + bunnyEars(bunnies - 1);}
 }
 
+
 2.Triangle
 public int triangle(int rows) 
 {
@@ -14,12 +15,14 @@ public int triangle(int rows)
   else{return rows + triangle(rows - 1);}
 }
 
+
 3.sumDigits
 public int sumDigits(int n) 
 {
   if(n==0){return 0;}
   else{return n%10 + sumDigits(n/10);}
 }
+
 
 4.count8
 public int count8(int n) 
