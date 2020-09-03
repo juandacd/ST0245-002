@@ -44,7 +44,6 @@ class ArrayList:
            self.__elements = elementsnew
                 
                 
-
 MiArray = ArrayList()
 MiArray.add(-1)
 MiArray.add(99)
