@@ -58,6 +58,3 @@ T1=time()
 print(LLamar_Queens(10))
 T2=time()
 print(T2-T1)
-
-            
-    
