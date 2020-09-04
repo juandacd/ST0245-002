@@ -30,10 +30,13 @@ contador=0
 def N_Queens(fila, n, Tablero):   
     for i in range(n):
             
-            if(i>0):
-               for l in range(len(Tablero)):
-                   if(l%n > fila):
-                       Tablero[l]=0
+             if(i>0 and fila < n-1):
+                for p in range(n):
+                    if(Tablero[(fila+1)+p*n] == '*'):
+                       for l in range(len(Tablero)):
+                           if(l%n > fila):
+                               Tablero[l]=0
+                       break
             
             Tablero[fila+(i*n)] = '*'
             
