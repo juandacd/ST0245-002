@@ -53,8 +53,7 @@ def N_Queens(fila, n, Tablero):
                 else:
                     N_Queens(fila+1, n, Tablero)    
             else:
-                Tablero[fila+(i*n)] = 0
-    #return N_Queens(0, n, [0]*(n**2))      
+                Tablero[fila+(i*n)] = 0     
     return contador
     
 T1=time()           
