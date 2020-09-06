@@ -53,8 +53,8 @@ def Generar_lista(n):
         lista[i] = n-i
     return lista
 
-
-for n in range(3000, 3020):
+n = 3000
+for k in range(20):   
     Nums = Generar_lista(n)
     T1 = time()
     OrdenInsert(Nums)
@@ -63,16 +63,18 @@ for n in range(3000, 3020):
     colors = ("blue")
     area = np.pi*2
     plt.scatter(n, T2-T1, s=area, c=colors, alpha=1)
-    
-    
-for n in range(3000, 3020):
-    Nums = Generar_lista(n)
+    n += 100
+
+j= 3000     
+for k in range(20):
+    Nums = Generar_lista(j)
     T1 = time()
     MergeSort(Nums)
     T2 = time()
     print(T2-T1)
     colors = ("green")
     area = np.pi*2
-    plt.scatter(n, T2-T1, s=area, c=colors, alpha=1)
+    plt.scatter(j, T2-T1, s=area, c=colors, alpha=1)
+    j += 100
 
 plt.show()
