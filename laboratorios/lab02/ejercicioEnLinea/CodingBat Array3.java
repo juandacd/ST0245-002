@@ -17,23 +17,23 @@ public int maxSpan(int[] nums)
         }
       }
     }
-  return maxSpan; //C11
+  return maxSpan;
 }
 
 //2. fix34
 public int[] fix34(int[] nums) 
 {
-  int aux = 0; //C1
+  int aux = 0; 
   for(int i = 0; i < nums.length; i++)
   { 
     if(nums[i] == 3)
     { 
-      aux = nums[i+1]; //C4*r
-      nums[i+1] = 4; //C5*r
+      aux = nums[i+1]; 
+      nums[i+1] = 4; 
       for(int j = i + 2; j < nums.length; j++){if(nums[j] == 4){nums[j] = aux;}}
     }
   }
-  return nums; //C9
+  return nums; 
 }
 
 //3.canBalance
@@ -44,8 +44,8 @@ public boolean canBalance(int[] nums)
   for(int i = 0; i < nums.length; i++)
   { //C3*m
     acum1 += nums[i]; 
-    for(int j = i+1; j < nums.length; j++){acum2 += nums[j]; //C6*m*(m-1)}
-    if(acum1 == acum2){return true; //C8}
+    for(int j = i+1; j < nums.length; j++){acum2 += nums[j];}
+    if(acum1 == acum2){return true;}
     acum2 = 0; 
   }
   return false; 
@@ -65,7 +65,7 @@ public boolean linearIn(int[] outer, int[] inner) {
       }
     }
   }
-  return count == inner.length; //C7
+  return count == inner.length; 
 }
 
 //5.seriesUp
