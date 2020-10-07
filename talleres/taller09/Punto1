@@ -1,0 +1,24 @@
+class HashTable():
+
+
+     def __init__(self):
+
+           self.__tabla = [0]*10
+
+
+     def funcion_hash(self, k):
+
+         return int(k[0])%10
+
+
+     def get(self, k):
+
+       posicion = funcionHash(k)
+
+       return tabla[posicion] # Error común return posicion
+ 
+    def put(self, k, v):       
+
+       posicion = funcionHash(k)
+
+       tabla[posicion] = v
