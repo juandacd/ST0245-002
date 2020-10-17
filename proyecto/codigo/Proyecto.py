@@ -11,7 +11,7 @@ Filtro = Filtro.fillna(0) #Cambia datos NaN(vacíos) por 0
 Aspectos = tuple(Filtro.columns.values)
 
 #print(Filtro.dtypes) #Tipo de dato cada item-columna
-print(Filtro.info())#Tipos de datos y uso de la memoria
+#print(Filtro.info())#Tipos de datos y uso de la memoria
 
 i=0
 for i in range (len(Aspectos)):
@@ -21,3 +21,24 @@ for i in range (len(Aspectos)):
         Filtro.iloc[:,i] = Filtro.iloc[:,i].astype('int16') # Se cambia el tipo de dato para usar menos memoria
         
 print(Filtro.info())#Tipos de datos y uso de la memoria
+
+def Impureza_de_Gini(Filtro):
+    
+    CantidadEstudiantes = len(Filtro["exito"])
+    Exito = len(Filtro[Filtro["exito"] == 1])
+    NoExito = len(Filtro[Filtro["exito"] == 0])
+    
+    Impureza = 1 - (((NoExito/CantidadEstudiantes)**2) - ((Exito/CantidadEstudiantes)**2)) 
+    return Impureza
+    
+
+def Impureza_de_Gini_Ponderada(FiltroDerecha, FiltroIzquierda):
+
+    Estudiantes1 = len(FiltroDerecha["exito"])
+    Estudiantes2 = len(FiltroIzquierda["exito"])
+    ImpurezaGiniDerecha = Impureza_de_Gini(FiltroDerecha)
+    ImpurezaGiniIzquierda = Impureza_de_Gini(FiltroIzquierda)
+    
+    ImpurezaGiniPonderada = ((Estudiantes1*ImpurezaGiniDerecha) + (Estudiantes2*ImpurezaGiniIzquierda)) / (Estudiantes1 + Estudiantes2)
+    return ImpurezaGiniPonderada
+
