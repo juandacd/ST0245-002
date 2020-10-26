@@ -76,8 +76,8 @@ class AbejasHash():
         self.Abejita = Abejita
         Hash = {}
         
-    def getHash(self):
-        return self.Hash
+    def getHash():
+        return Hash
     
     def GuardandoAbejas(self, Abejota):
         if(self.Abejita.getDistancia(Abejota) > 100):
