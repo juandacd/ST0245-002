@@ -74,7 +74,7 @@ class AbejasHash():
     
     def __init__(self, Abejita):
         self.Abejita = Abejita
-        self.Hash = {}
+        Hash = {}
         
     def getHash(self):
         return self.Hash
@@ -83,7 +83,7 @@ class AbejasHash():
         if(self.Abejita.getDistancia(Abejota) > 100):
             return False
         else:
-            self.Hash[self.Abejita.getDistancia(Abejota)] = Abejota
+            Hash[self.Abejita.getDistancia(Abejota)] = Abejota
             return True
         
     def get(elemento):
