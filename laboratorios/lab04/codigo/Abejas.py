@@ -70,6 +70,26 @@ class  AbejasÁrbol():
             return True
     
     
+class AbejasHash():
+    
+    def __init__(self, Abejita):
+        self.Abejita = Abejita
+        self.Hash = {}
+        
+    def getHash(self):
+        return self.Hash
+    
+    def GuardandoAbejas(self, Abejota):
+        if(self.Abejita.getDistancia(Abejota) > 100):
+            return False
+        else:
+            self.Hash[self.Abejita.getDistancia(Abejota)] = Abejota
+            return True
+        
+    def get(elemento):
+        return Hash.get(elemento)
+    
+    
 Abeja1 = Abeja(3,7,9)
 Abeja2 = Abeja(1,9,2)
 Abeja3 = Abeja(5,1,4)
@@ -80,4 +100,4 @@ Abeja5 = Abeja(9,2,8)
 Árbolito.GuardarAbejas(Abeja2)
 Árbolito.GuardarAbejas(Abeja3)
 Árbolito.GuardarAbejas(Abeja4)
-Árbolito.GuardarAbejas(Abeja5)
+Árbolito.GuardarAbejas(Abeja5)  
