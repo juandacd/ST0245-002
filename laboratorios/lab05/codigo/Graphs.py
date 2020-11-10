@@ -37,6 +37,7 @@ class GraphAM(Graph):
     def getWeight(self, source, destination):
         return self.Mat[source][destination]
     
+    
 class GraphAl:
     
     def __init__(self,size):
@@ -63,6 +64,7 @@ class GraphAl:
             return        
       print("IS COLORABLE") 
 
+    
 gf = GraphAl(9)
 gf.addArc(0,1)
 gf.addArc(0,2)
